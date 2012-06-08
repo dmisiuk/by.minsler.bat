@@ -35,5 +35,7 @@ public class MainProgram {
 
 		System.out.println(ms.toString(MySet.EVEN));
 		System.out.println(ms.toString(MySet.ODD));
+
+		System.out.println("dima petia".matches("(.*)(dima)(.*)"));
 	}
 }
