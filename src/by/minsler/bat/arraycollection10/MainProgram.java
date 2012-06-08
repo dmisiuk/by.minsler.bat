@@ -7,10 +7,15 @@ public class MainProgram {
 		int[] a = { 1, 2, 34, 01, -1, 23, 34, -190, 23 };
 		MySet ms = new MySet(a);
 		System.out.println(ms);
-		System.out.println(ms.average());
+		System.out.println("Сумма: " + ms.sum()
+				+ "\nСреднее значение элемента:  " + ms.average());
+
 		ms.sortUp();
 		System.out.println(ms);
 		ms.sortDown();
 		System.out.println(ms);
+
+		System.out.println(ms.toStringEven());
+		System.out.println(ms.toStringOdd());
 	}
 }

@@ -49,4 +49,23 @@ public class MySet {
 		}
 	}
 
+	public String toStringEven() {
+		String str = "";
+		for (int i : a) {
+			if (i % 2 == 0) {
+				str = str + " " + String.valueOf(i);
+			}
+		}
+		return str;
+	}
+
+	public String toStringOdd() {
+		String str = "";
+		for (int i : a) {
+			if (i % 2 != 0) {
+				str = str + " " + String.valueOf(i);
+			}
+		}
+		return str;
+	}
 }
