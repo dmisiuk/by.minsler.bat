@@ -7,10 +7,12 @@ public class MainProgram {
 	public static void main(String[] args) {
 
 		// int[] a = { 1, 2, 34, 01, -1, 23, 34, -190, 23 };
-
 		int n;
 		int a[];
 		Scanner sc = new Scanner(System.in);
+
+		// TODO Сделать проверку на ошибочный ввод при запросах
+
 		System.out.print("Enter n(amount elements of array) and press Enter");
 		n = Integer.parseInt(sc.next());
 		a = new int[n];
