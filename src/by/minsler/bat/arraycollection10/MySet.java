@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class MySet {
 
+	public static final int ALL = 0;
+	public static final int EVEN = 1;
+	public static final int ODD = 2;
+
 	private int n = 0;
 	private int a[];
 
@@ -20,19 +24,10 @@ public class MySet {
 		return sum;
 	}
 
-	public int average() {
+	public double average() {
 		int result;
 		result = (int) this.sum() / n;
 		return result;
-	}
-
-	@Override
-	public String toString() {
-		String str = "";
-		for (int i : a) {
-			str = str + " " + String.valueOf(i);
-		}
-		return str;
 	}
 
 	public void sortUp() {
@@ -49,23 +44,41 @@ public class MySet {
 		}
 	}
 
-	public String toStringEven() {
+	@Override
+	public String toString() {
+		return this.toString(ALL);
+	}
+
+	public String toString(int parity) {
 		String str = "";
 		for (int i : a) {
-			if (i % 2 == 0) {
+			if (toGet(i, parity)) {
 				str = str + " " + String.valueOf(i);
 			}
 		}
 		return str;
 	}
 
-	public String toStringOdd() {
-		String str = "";
-		for (int i : a) {
-			if (i % 2 != 0) {
-				str = str + " " + String.valueOf(i);
+	private boolean toGet(int i, int parity) {
+		boolean cond = false;
+		switch (parity) {
+		case ALL:
+			cond = true;
+			break;
+		case EVEN:
+			if (i % 2 == 0) {
+				cond = true;
 			}
+			break;
+		case ODD:
+			if (i % 2 != 0) {
+				cond = true;
+			}
+			break;
+		default:
+			break;
 		}
-		return str;
+		return cond;
 	}
+
 }

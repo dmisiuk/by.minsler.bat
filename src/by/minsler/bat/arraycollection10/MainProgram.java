@@ -15,7 +15,7 @@ public class MainProgram {
 		ms.sortDown();
 		System.out.println(ms);
 
-		System.out.println(ms.toStringEven());
-		System.out.println(ms.toStringOdd());
+		System.out.println(ms.toString(MySet.EVEN));
+		System.out.println(ms.toString(MySet.ODD));
 	}
 }
