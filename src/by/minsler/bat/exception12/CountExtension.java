@@ -31,9 +31,10 @@ public class CountExtension {
 					extenstions.put(ext, 1);
 				}
 			}
+			System.out.println(extenstions);
+		} else {
+			System.out.println(dirName + " is not directory or not exist");
 		}
-
-		System.out.println(extenstions);
 
 	}
 
