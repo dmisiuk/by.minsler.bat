@@ -1,6 +1,7 @@
 package by.minsler.bat.arraycollection10;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class MySet {
 
@@ -9,9 +10,9 @@ public class MySet {
 	public static final int ODD = 2;
 
 	private int n = 0;
-	private int a[];
+	private Integer a[];
 
-	public MySet(int a[]) {
+	public MySet(Integer a[]) {
 		this.a = a;
 		n = a.length;
 	}
@@ -35,13 +36,7 @@ public class MySet {
 	}
 
 	public void sortDown() {
-		this.sortUp();
-		int temp;
-		for (int i = 0; i < n / 2; i++) {
-			temp = a[i];
-			a[i] = a[n - i - 1];
-			a[n - i - 1] = temp;
-		}
+		Arrays.sort(a, Collections.reverseOrder());
 	}
 
 	@Override
